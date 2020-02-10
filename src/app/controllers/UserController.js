@@ -15,10 +15,10 @@ class UserController {
             name,
             email,
             provider
-
         });
-
-
+    }
+    async update(req, res) {
+        return res.json({ ok: true });
     }
 
 }
