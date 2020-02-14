@@ -8,7 +8,7 @@ class UserController {
         const schema = Yup.object().shape({
             name: Yup.string().required(), // verofica se n esta vazio
             email: Yup.string().email().required(), // verifica email
-            password: Yup.string().required().min(6), // verifica min 6 caract
+            password: Yup.string().required(), // verifica min 6 caract
         });
 
         if (!(await schema.isValid(req.body))) {

@@ -14,13 +14,13 @@ module.exports = {
       email: {
         type: Sequelize.STRING,
         allowNull: false,
-        unique:true,
+        unique: true,
       },
       password_hash: {
         type: Sequelize.STRING,
         allowNull: false,
       },
-      provider:{
+      provider: {
         type: Sequelize.BOOLEAN,
         defaultValue: false,
         allowNull: false,
@@ -33,12 +33,10 @@ module.exports = {
         type: Sequelize.DATE,
         allowNull: false,
       },
-      });
-    },
+    });
+  },
 
-    down: (queryInterface) => {
-
-        return queryInterface.dropTable('users');
-
-    }
+  down: queryInterface => {
+    return queryInterface.dropTable('users');
+  },
 };
