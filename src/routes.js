@@ -8,6 +8,7 @@ import ProviderController from './app/controllers/ProviderController';
 import Middleare from './app/middlewares/auth';
 import AppointmentController from './app/controllers/AppointmentController';
 import ScheduleController from './app/controllers/ScheduleController';
+import AvailableController from './app/controllers/AvailableController';
 import NotificationController from './app/controllers/NotificationController';
 
 const routes = new Router();
@@ -24,6 +25,7 @@ routes.use(Middleare);
 routes.put('/users', UserController.update);
 
 routes.get('/providers', ProviderController.index);
+routes.get('/providers/:providerId/available', AvailableController.index);
 
 routes.get('/appointments', AppointmentController.index);
 
